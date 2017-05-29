@@ -25,33 +25,97 @@ ext {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.3"
+    compileSdkVersion sdk.compile
+    buildToolsVersion app.buildTools
+
+    dataBinding {
+        enabled = true
+    }
 
     defaultConfig {
-        minSdkVersion 19
-        targetSdkVersion 25
+        minSdkVersion sdk.min
+        targetSdkVersion sdk.target
         versionCode 1
         versionName "1.0"
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
 
     }
+
     buildTypes {
+        debug {
+        }
+
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    compileOptions {
+        sourceCompatibility lang.source
+        targetCompatibility lang.target
+    }
 }
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:25.3.1'
-    testCompile 'junit:junit:4.12'
+
+    compile support.appCompat
+    compile support.design
+    compile support.recyclerView
+    compile support.cardView
+    compile support.annotation
+    compile support.coreUtils
+    compile support.multidex
+
+    compile squareup.retrofit
+    compile squareup.retrofitGson
+    compile squareup.okHttp
+    compile squareup.loggingInterceptor
+
+    compile joda.time
+
+    compile google.guava
+    compile google.gson
+
+    provided autoValue.autoValue
+    provided autoValue.autoGson
+
+    annotationProcessor autoValue.autoValue
+    annotationProcessor autoValue.autoParcel
+    annotationProcessor autoValue.autoGson
+
+    compile glide.glide
+    compile glide.glideTransformations
+    compile glide.glideGpuLibrary
+
+    compile rx.java
+    compile rx.android
+    compile rx.retrofitAdapter
+
+    compile requery.requery
+    compile requery.requeryAndroid
+    annotationProcessor requery.requeryProcessor
+
+    debugCompile squareup.leakCanaryDebug
+    releaseCompile squareup.leakCanaryRelease
+
+    compile dagger.di
+    provided dagger.jsr250
+    annotationProcessor dagger.compiler
+
+    testCompile squareup.leakCanaryTest
+    testCompile test.junit
+    testCompile test.mockito
+    testCompile rx.java
+    testCompile rx.android
+
+    testAnnotationProcessor dagger.compiler
+
+    androidTestAnnotationProcessor dagger.compiler
+    androidTestAnnotationProcessor requery.requeryProcessor
 }
 
 apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
