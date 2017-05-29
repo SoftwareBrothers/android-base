@@ -1,0 +1,11 @@
+*.iml
+.gradle
+/local.properties
+/.idea
+/build
+/captures
+/projectFilesBackup
+.DS_Store
+/.project
+/densities.json
+*.apk

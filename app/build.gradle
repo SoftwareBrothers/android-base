@@ -1,0 +1,96 @@
+apply plugin: 'com.android.application'
+apply plugin: 'me.tatarka.retrolambda'
+
+android {
+    compileSdkVersion sdk.compile
+    buildToolsVersion app.buildTools
+
+    dataBinding {
+        enabled = true
+    }
+
+    defaultConfig {
+        applicationId "${app.baseId}"
+        minSdkVersion sdk.min
+        targetSdkVersion sdk.target
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        debug {
+
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility lang.source
+        targetCompatibility lang.target
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    compile support.appCompat
+    compile support.design
+    compile support.recyclerView
+    compile support.cardView
+    compile support.annotation
+    compile support.coreUtils
+    compile support.multidex
+
+    compile squareup.retrofit
+    compile squareup.retrofitGson
+    compile squareup.okHttp
+    compile squareup.loggingInterceptor
+
+    compile joda.time
+
+    compile google.guava
+    compile google.gson
+
+    provided autoValue.autoValue
+    provided autoValue.autoGson
+
+    annotationProcessor autoValue.autoValue
+    annotationProcessor autoValue.autoParcel
+    annotationProcessor autoValue.autoGson
+
+    compile glide.glide
+    compile glide.glideTransformations
+    compile glide.glideGpuLibrary
+
+    compile rx.java
+    compile rx.android
+    compile rx.retrofitAdapter
+
+    compile requery.requery
+    compile requery.requeryAndroid
+    annotationProcessor requery.requeryProcessor
+
+    debugCompile squareup.leakCanaryDebug
+    releaseCompile squareup.leakCanaryRelease
+
+    compile dagger.di
+    provided dagger.jsr250
+    annotationProcessor dagger.compiler
+
+    testCompile squareup.leakCanaryTest
+    testCompile test.junit
+    testCompile test.mockito
+    testCompile rx.java
+    testCompile rx.android
+
+    testAnnotationProcessor dagger.compiler
+
+    androidTestAnnotationProcessor dagger.compiler
+    androidTestAnnotationProcessor requery.requeryProcessor
+}

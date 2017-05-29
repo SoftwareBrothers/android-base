@@ -1,0 +1,91 @@
+ext {
+    supportLibraryVersion = '25.3.1'
+    multidexVersion = '1.0.1'
+    retrofitVersion = '2.2.0'
+    guavaVersion = '20.0'
+    glideVersion = '3.7.0'
+    glideTransformationsVersion = '2.0.1'
+    glideGpuLibraryVersion = '1.3.0'
+    rxJavaVersion = '2.1.0'
+    rxAndroidVersion = '2.0.1'
+    rxRetrofitAdapterVersion = '1.0.0'
+    junitVersion = '4.12'
+    leakCanaryVersion = '1.4'
+    daggerVersion = '2.9'
+    jsr250Version = '1.0'
+    loggingInterceptorVersion = '3.6.0'
+    okHttpVersion = '3.6.0'
+    autoValueVersion = '1.3'
+    autoParcelVersion = '0.2.5'
+    autoGsonVersion = '0.4.6'
+    jodaTimeVersion = '2.9.7'
+    mockitoVersion = '2.7.10'
+    requeryVersion = '1.2.0'
+    requeryAndroidVersion = '1.2.0'
+    requeryProcessorVersion = '1.2.0'
+    gsonVersion = '2.8.0'
+
+    support = [
+            design      : "com.android.support:design:${supportLibraryVersion}",
+            recyclerView: "com.android.support:recyclerview-v7:${supportLibraryVersion}",
+            cardView    : "com.android.support:cardview-v7:${supportLibraryVersion}",
+            appCompat   : "com.android.support:appcompat-v7:${supportLibraryVersion}",
+            annotation  : "com.android.support:support-annotations:${supportLibraryVersion}",
+            coreUtils   : "com.android.support:support-core-utils:${supportLibraryVersion}",
+            multidex    : "com.android.support:multidex:${multidexVersion}"
+    ]
+
+    squareup = [
+            retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+            retrofitGson      : "com.squareup.retrofit2:converter-gson:${retrofitVersion}",
+            loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${loggingInterceptorVersion}",
+            leakCanaryDebug   : "com.squareup.leakcanary:leakcanary-android:${leakCanaryVersion}",
+            leakCanaryRelease : "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+            leakCanaryTest    : "com.squareup.leakcanary:leakcanary-android-no-op:${leakCanaryVersion}",
+            okHttp            : "com.squareup.okhttp3:okhttp:${okHttpVersion}"
+    ]
+
+    joda = [
+            time: "joda-time:joda-time:${jodaTimeVersion}"
+    ]
+
+    google = [
+            guava: "com.google.guava:guava:${guavaVersion}",
+            gson : "com.google.code.gson:gson:${gsonVersion}",
+    ]
+
+    autoValue = [
+            autoValue : "com.google.auto.value:auto-value:${autoValueVersion}",
+            autoParcel: "com.ryanharter.auto.value:auto-value-parcel:${autoParcelVersion}",
+            autoGson  : "com.ryanharter.auto.value:auto-value-gson:${autoGsonVersion}"
+    ]
+
+    glide = [
+            glide               : "com.github.bumptech.glide:glide:${glideVersion}",
+            glideTransformations: "jp.wasabeef:glide-transformations:${glideTransformationsVersion}",
+            glideGpuLibrary     : "jp.co.cyberagent.android.gpuimage:gpuimage-library:${glideGpuLibraryVersion}"
+    ]
+
+    rx = [
+            java           : "io.reactivex.rxjava2:rxjava:${rxJavaVersion}",
+            android        : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+            retrofitAdapter: "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:${rxRetrofitAdapterVersion}"
+    ]
+
+    requery = [
+            requery         : "io.requery:requery:${requeryVersion}",
+            requeryAndroid  : "io.requery:requery-android:${requeryAndroidVersion}",
+            requeryProcessor: "io.requery:requery-processor:${requeryProcessorVersion}"
+    ]
+
+    dagger = [
+            compiler: "com.google.dagger:dagger-compiler:${daggerVersion}",
+            di      : "com.google.dagger:dagger:${daggerVersion}",
+            jsr250  : "javax.annotation:jsr250-api:${jsr250Version}"
+    ]
+
+    test = [
+            junit  : "junit:junit:${junitVersion}",
+            mockito: "org.mockito:mockito-core:${mockitoVersion}"
+    ]
+}

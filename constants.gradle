@@ -1,0 +1,17 @@
+ext {
+    app = [
+            buildTools: "25.0.3",
+            baseId: "com.rstit.base"
+    ]
+
+    sdk = [
+            min: 19,
+            target: 25,
+            compile: 25
+    ]
+
+    lang = [
+            source: JavaVersion.VERSION_1_8,
+            target: JavaVersion.VERSION_1_8
+    ]
+}
