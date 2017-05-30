@@ -5,9 +5,9 @@ import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.multidex.MultiDex;
 
-import com.rstit.base.di.base.AppComponent;
-import com.rstit.base.di.base.AppModule;
-import com.rstit.base.di.base.DaggerAppComponent;
+import com.rstit.di.base.AppComponent;
+import com.rstit.di.base.AppModule;
+import com.rstit.di.base.DaggerAppComponent;
 
 /**
  * @author Tomasz Trybala

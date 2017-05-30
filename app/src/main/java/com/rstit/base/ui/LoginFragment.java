@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 import com.rstit.base.R;
 import com.rstit.base.SampleApplication;
 import com.rstit.base.databinding.FragmentLoginBinding;
-import com.rstit.base.di.login.LoginModule;
+import com.rstit.di.login.LoginModule;
 
 import javax.inject.Inject;
 
-import base.ui.auth.login.LoginViewAccess;
-import base.ui.auth.login.LoginViewModel;
+import com.rstit.ui.auth.login.LoginViewAccess;
+import com.rstit.ui.auth.login.LoginViewModel;
 
 /**
  * @author Tomasz Trybala

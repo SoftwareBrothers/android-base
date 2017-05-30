@@ -10,7 +10,7 @@ import android.support.v7.app.AppCompatActivity;
 import com.rstit.base.R;
 import com.rstit.base.SampleApplication;
 import com.rstit.base.databinding.ActivityMainBinding;
-import com.rstit.base.di.main.MainModule;
+import com.rstit.di.main.MainModule;
 import com.rstit.base.ui.ForgotPasswordFragment;
 import com.rstit.base.ui.LoginFragment;
 import com.rstit.base.ui.RegisterFragment;

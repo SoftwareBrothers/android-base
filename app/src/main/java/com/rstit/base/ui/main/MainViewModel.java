@@ -4,7 +4,7 @@ import android.databinding.ObservableBoolean;
 
 import javax.inject.Inject;
 
-import base.ui.base.model.BaseViewModel;
+import com.rstit.ui.base.model.BaseViewModel;
 
 /**
  * @author Tomasz Trybala

@@ -7,7 +7,7 @@
 
         <variable
             name="model"
-            type="base.ui.auth.login.LoginViewModel"/>
+            type="com.rstit.ui.auth.login.LoginViewModel"/>
     </data>
 
     <LinearLayout

@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 import com.rstit.base.R;
 import com.rstit.base.SampleApplication;
 import com.rstit.base.databinding.FragmentRegisterBinding;
-import com.rstit.base.di.register.RegisterModule;
+import com.rstit.di.register.RegisterModule;
 
 import javax.inject.Inject;
 
-import base.ui.auth.register.RegisterViewAccess;
-import base.ui.auth.register.RegisterViewModel;
+import com.rstit.ui.auth.register.RegisterViewAccess;
+import com.rstit.ui.auth.register.RegisterViewModel;
 
 /**
  * @author Tomasz Trybala

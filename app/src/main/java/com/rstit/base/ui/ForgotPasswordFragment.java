@@ -12,12 +12,12 @@ import android.view.ViewGroup;
 import com.rstit.base.R;
 import com.rstit.base.SampleApplication;
 import com.rstit.base.databinding.FragmentForgotPasswordBinding;
-import com.rstit.base.di.password.ForgotPasswordModule;
+import com.rstit.di.password.ForgotPasswordModule;
 
 import javax.inject.Inject;
 
-import base.ui.auth.password.ForgotPasswordViewAccess;
-import base.ui.auth.password.ForgotPasswordViewModel;
+import com.rstit.ui.auth.password.ForgotPasswordViewAccess;
+import com.rstit.ui.auth.password.ForgotPasswordViewModel;
 
 /**
  * @author Tomasz Trybala
