@@ -47,11 +47,11 @@ public class LoginFragment extends Fragment implements LoginViewAccess {
 
     @Override
     public @NonNull String getLoginErrorMessage() {
-        return "Login has to be a valid email address";
+        return getString(R.string.error_login);
     }
 
     @Override
     public @NonNull String getPasswordErrorMessage() {
-        return "Password has to contain at least 6 characters";
+        return getString(R.string.error_password);
     }
 }

@@ -70,6 +70,7 @@ public class MainActivity extends AppCompatActivity implements MainViewAccess {
 
         getSupportFragmentManager()
                 .beginTransaction()
+                .setCustomAnimations(android.R.anim.fade_in, android.R.anim.fade_out)
                 .replace(R.id.flContainer, fragment)
                 .commit();
     }

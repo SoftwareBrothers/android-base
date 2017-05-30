@@ -47,6 +47,6 @@ public class ForgotPasswordFragment extends Fragment implements ForgotPasswordVi
 
     @Override
     public @NonNull String getLoginErrorMessage() {
-        return "Login has to be a valid email address";
+        return getString(R.string.error_login);
     }
 }

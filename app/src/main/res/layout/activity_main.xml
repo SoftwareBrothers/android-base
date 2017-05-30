@@ -27,21 +27,21 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding_large"
                 android:onClick="@{() -> model.openLogin()}"
-                android:text="Login"/>
+                android:text="@string/main_login"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding_large"
                 android:onClick="@{() -> model.openRegister()}"
-                android:text="Register"/>
+                android:text="@string/main_register"/>
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding_large"
                 android:onClick="@{() -> model.openForgot()}"
-                android:text="Forgot password"/>
+                android:text="@string/main_forgot_password"/>
         </LinearLayout>
 
         <FrameLayout
