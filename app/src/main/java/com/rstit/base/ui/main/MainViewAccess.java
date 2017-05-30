@@ -1,7 +1,6 @@
 package com.rstit.base.ui.main;
 
 import android.support.annotation.NonNull;
-import android.support.v4.app.Fragment;
 
 /**
  * @author Tomasz Trybala

@@ -16,95 +16,100 @@
         android:orientation="vertical"
         android:padding="@dimen/padding_large">
 
-        <LinearLayout
+        <android.support.v4.widget.NestedScrollView
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
-            android:orientation="vertical">
+            android:layout_weight="1">
 
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:error="@{model.mLoginError}"
-                app:errorEnabled="@{model.mLoginError != null}">
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_login"
-                    android:inputType="textEmailAddress"
-                    android:maxLines="1"
-                    android:text="@={model.mLogin}"/>
-            </android.support.design.widget.TextInputLayout>
+                    app:error="@{model.mLoginError}"
+                    app:errorEnabled="@{model.mLoginError != null}">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_small"
-                app:error="@{model.mFirstNameError}"
-                app:errorEnabled="@{model.mFirstNameError != null}">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_login"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:text="@={model.mLogin}"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_first_name"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:text="@={model.mFirstName}"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="@dimen/padding_small"
+                    app:error="@{model.mFirstNameError}"
+                    app:errorEnabled="@{model.mFirstNameError != null}">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_small"
-                app:error="@{model.mLastNameError}"
-                app:errorEnabled="@{model.mLastNameError != null}">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_first_name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:text="@={model.mFirstName}"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_last_name"
-                    android:inputType="textPersonName"
-                    android:maxLines="1"
-                    android:text="@={model.mLastName}"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="@dimen/padding_small"
+                    app:error="@{model.mLastNameError}"
+                    app:errorEnabled="@{model.mLastNameError != null}">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_small"
-                app:error="@{model.mPasswordError}"
-                app:errorEnabled="@{model.mPasswordError != null}"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/colorPrimary">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_last_name"
+                        android:inputType="textPersonName"
+                        android:maxLines="1"
+                        android:text="@={model.mLastName}"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:text="@={model.mPassword}"/>
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="@dimen/padding_small"
+                    app:error="@{model.mPasswordError}"
+                    app:errorEnabled="@{model.mPasswordError != null}"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorPrimary">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/padding_small"
-                app:error="@{model.mConfirmPasswordError}"
-                app:errorEnabled="@{model.mConfirmPasswordError != null}"
-                app:passwordToggleEnabled="true"
-                app:passwordToggleTint="@color/colorPrimary">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:text="@={model.mPassword}"/>
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/hint_confirm_password"
-                    android:inputType="textPassword"
-                    android:maxLines="1"
-                    android:text="@={model.mConfirmPassword}"/>
-            </android.support.design.widget.TextInputLayout>
-        </LinearLayout>
+                    android:layout_marginTop="@dimen/padding_small"
+                    app:error="@{model.mConfirmPasswordError}"
+                    app:errorEnabled="@{model.mConfirmPasswordError != null}"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/colorPrimary">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_confirm_password"
+                        android:inputType="textPassword"
+                        android:maxLines="1"
+                        android:text="@={model.mConfirmPassword}"/>
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
 
         <Button
             android:layout_width="wrap_content"
