@@ -2,6 +2,7 @@ package com.rstit.base.di.base;
 
 import javax.inject.Singleton;
 
+import base.di.base.ValidationModule;
 import dagger.Component;
 
 /**

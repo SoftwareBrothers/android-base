@@ -7,6 +7,6 @@ import android.support.annotation.NonNull;
  * @since 2017-05-26
  */
 
-public interface ForgetPasswordViewAccess {
+public interface ForgotPasswordViewAccess {
     @NonNull String getLoginErrorMessage();
 }

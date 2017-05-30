@@ -13,19 +13,19 @@ import javax.inject.Inject;
  * @since 2017-05-26
  */
 
-public class ForgetPasswordViewModel {
+public class ForgotPasswordViewModel {
     public final ObservableString mLogin = new ObservableString();
     public final ObservableString mLoginError = new ObservableString();
 
     @Inject
-    protected ForgetPasswordViewAccess mViewAccess;
+    protected ForgotPasswordViewAccess mViewAccess;
 
     @Inject
     @EmailValidatorName
     protected Validator mLoginValidator;
 
     @Inject
-    public ForgetPasswordViewModel() {
+    public ForgotPasswordViewModel() {
     }
 
     protected void setLoginValidator(@Nullable Validator loginValidator) {

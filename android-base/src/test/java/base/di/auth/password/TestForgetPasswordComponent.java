@@ -1,7 +1,7 @@
 package base.di.auth.password;
 
 
-import base.ui.auth.password.ForgetPasswordViewModelTest;
+import base.ui.auth.password.ForgotPasswordViewModelTest;
 
 import dagger.Subcomponent;
 
@@ -11,5 +11,5 @@ import dagger.Subcomponent;
  */
 @Subcomponent(modules = TestForgetPasswordModule.class)
 public interface TestForgetPasswordComponent {
-    ForgetPasswordViewModelTest inject(ForgetPasswordViewModelTest test);
+    ForgotPasswordViewModelTest inject(ForgotPasswordViewModelTest test);
 }

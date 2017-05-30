@@ -39,6 +39,8 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
 
+    compile project(":android-base")
+
     compile support.appCompat
     compile support.design
     compile support.recyclerView

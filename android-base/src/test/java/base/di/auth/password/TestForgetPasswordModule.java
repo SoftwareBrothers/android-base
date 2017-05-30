@@ -2,7 +2,7 @@ package base.di.auth.password;
 
 import android.support.annotation.NonNull;
 
-import base.ui.auth.password.ForgetPasswordViewAccess;
+import base.ui.auth.password.ForgotPasswordViewAccess;
 
 import dagger.Module;
 import dagger.Provides;
@@ -16,7 +16,7 @@ import static org.mockito.Mockito.mock;
 @Module
 public class TestForgetPasswordModule {
     @Provides
-    @NonNull ForgetPasswordViewAccess provideForgetPasswordViewAccess() {
-        return mock(ForgetPasswordViewAccess.class);
+    @NonNull ForgotPasswordViewAccess provideForgetPasswordViewAccess() {
+        return mock(ForgotPasswordViewAccess.class);
     }
 }

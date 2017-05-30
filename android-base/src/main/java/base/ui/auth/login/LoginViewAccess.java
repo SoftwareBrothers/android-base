@@ -11,8 +11,4 @@ public interface LoginViewAccess {
     @NonNull String getLoginErrorMessage();
 
     @NonNull String getPasswordErrorMessage();
-
-    void hideKeyboard();
-
-    void finish();
 }

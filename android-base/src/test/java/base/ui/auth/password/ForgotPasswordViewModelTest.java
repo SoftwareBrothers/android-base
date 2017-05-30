@@ -22,12 +22,12 @@ import static org.mockito.Mockito.when;
  * @author Tomasz Trybala
  * @since 2017-05-26
  */
-public class ForgetPasswordViewModelTest {
+public class ForgotPasswordViewModelTest {
     @Rule
     public RxJavaTestRule mRxJavaRule = new RxJavaTestRule();
 
     @Inject
-    protected ForgetPasswordViewModel mModel;
+    protected ForgotPasswordViewModel mModel;
 
     @Before
     public void setUp() throws Exception {
