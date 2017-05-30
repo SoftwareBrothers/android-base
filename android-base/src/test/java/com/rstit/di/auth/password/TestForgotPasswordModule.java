@@ -14,9 +14,9 @@ import static org.mockito.Mockito.mock;
  * @since 25.05.2017
  */
 @Module
-public class TestForgetPasswordModule {
+public class TestForgotPasswordModule {
     @Provides
-    @NonNull ForgotPasswordViewAccess provideForgetPasswordViewAccess() {
+    @NonNull ForgotPasswordViewAccess provideForgotPasswordViewAccess() {
         return mock(ForgotPasswordViewAccess.class);
     }
 }

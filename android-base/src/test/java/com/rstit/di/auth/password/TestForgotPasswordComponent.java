@@ -9,7 +9,7 @@ import dagger.Subcomponent;
  * @author Tomasz Trybala
  * @since 26.05.2017
  */
-@Subcomponent(modules = TestForgetPasswordModule.class)
-public interface TestForgetPasswordComponent {
+@Subcomponent(modules = TestForgotPasswordModule.class)
+public interface TestForgotPasswordComponent {
     ForgotPasswordViewModelTest inject(ForgotPasswordViewModelTest test);
 }

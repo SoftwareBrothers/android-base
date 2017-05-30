@@ -14,8 +14,7 @@ ext {
     siteUrl = 'https://github.com/rstgroup/android-base'
     gitUrl = 'https://github.com/rstgroup/android-base.git'
 
-    libraryVersion = '1.0.1'
-
+    libraryVersion = '1.0.2'
     developerId = 'rst-it'
     developerName = 'RST-IT Developer'
     developerEmail = 'developer@rst-it.com'

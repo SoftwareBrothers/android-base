@@ -2,7 +2,7 @@ package com.rstit.ui.auth.password;
 
 import com.google.common.base.Strings;
 import com.rstit.RxJavaTestRule;
-import com.rstit.di.auth.password.TestForgetPasswordModule;
+import com.rstit.di.auth.password.TestForgotPasswordModule;
 import com.rstit.di.base.DaggerTestAppComponent;
 import com.rstit.validation.EmailValidator;
 import com.rstit.validation.Validator;
@@ -33,7 +33,7 @@ public class ForgotPasswordViewModelTest {
     public void setUp() throws Exception {
         DaggerTestAppComponent.builder()
                 .build()
-                .plus(new TestForgetPasswordModule())
+                .plus(new TestForgotPasswordModule())
                 .inject(this);
     }
 

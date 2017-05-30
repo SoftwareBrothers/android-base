@@ -2,8 +2,8 @@ package com.rstit.di.base;
 
 import com.rstit.di.auth.login.TestLoginComponent;
 import com.rstit.di.auth.login.TestLoginModule;
-import com.rstit.di.auth.password.TestForgetPasswordComponent;
-import com.rstit.di.auth.password.TestForgetPasswordModule;
+import com.rstit.di.auth.password.TestForgotPasswordComponent;
+import com.rstit.di.auth.password.TestForgotPasswordModule;
 import com.rstit.di.auth.register.TestRegisterComponent;
 import com.rstit.di.auth.register.TestRegisterModule;
 
@@ -26,5 +26,5 @@ public interface TestAppComponent {
 
     TestRegisterComponent plus(TestRegisterModule module);
 
-    TestForgetPasswordComponent plus(TestForgetPasswordModule module);
+    TestForgotPasswordComponent plus(TestForgotPasswordModule module);
 }
