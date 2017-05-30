@@ -32,7 +32,7 @@ public class ForgotPasswordViewModel {
         mLoginValidator = loginValidator;
     }
 
-    protected boolean isValidateLogin() {
+    public boolean isValidateLogin() {
         boolean valid = true;
 
         if (mLoginValidator != null && !mLoginValidator.isValid(mLogin.get())) {

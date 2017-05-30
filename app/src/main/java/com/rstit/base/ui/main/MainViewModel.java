@@ -27,15 +27,22 @@ public class MainViewModel extends BaseViewModel {
     public MainViewModel() {
     }
 
+    public void setIsFormVisible(boolean isVisible) {
+        mIsFormVisible.set(isVisible);
+    }
+
     public void openLogin() {
+        mIsFormVisible.set(true);
         mViewAccess.setFragment(Type.Login);
     }
 
     public void openRegister() {
+        mIsFormVisible.set(true);
         mViewAccess.setFragment(Type.Register);
     }
 
     public void openForgot() {
+        mIsFormVisible.set(true);
         mViewAccess.setFragment(Type.ForgotPassword);
     }
 }

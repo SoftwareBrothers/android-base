@@ -70,7 +70,7 @@ public class LoginViewModel extends BaseViewModel {
         return valid;
     }
 
-    protected boolean isInputDataValid() {
+    public boolean isInputDataValid() {
         return isValidateLogin() && isValidatePassword();
     }
 }

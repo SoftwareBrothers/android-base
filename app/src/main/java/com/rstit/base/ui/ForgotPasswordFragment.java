@@ -11,35 +11,35 @@ import android.view.ViewGroup;
 
 import com.rstit.base.R;
 import com.rstit.base.SampleApplication;
-import com.rstit.base.databinding.FragmentLoginBinding;
-import com.rstit.base.di.login.LoginModule;
+import com.rstit.base.databinding.FragmentForgotPasswordBinding;
+import com.rstit.base.di.password.ForgotPasswordModule;
 
 import javax.inject.Inject;
 
-import base.ui.auth.login.LoginViewAccess;
-import base.ui.auth.login.LoginViewModel;
+import base.ui.auth.password.ForgotPasswordViewAccess;
+import base.ui.auth.password.ForgotPasswordViewModel;
 
 /**
  * @author Tomasz Trybala
  * @since 2017-05-30
  */
 
-public class LoginFragment extends Fragment implements LoginViewAccess {
+public class ForgotPasswordFragment extends Fragment implements ForgotPasswordViewAccess {
     @Inject
-    protected LoginViewModel mModel;
+    protected ForgotPasswordViewModel mModel;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         SampleApplication.get(getActivity()).getAppComponent()
-                .plus(new LoginModule(this))
+                .plus(new ForgotPasswordModule(this))
                 .inject(this);
     }
 
     @Override
     public @Nullable View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentLoginBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_login, null, false);
+        FragmentForgotPasswordBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_forgot_password, null, false);
         binding.setModel(mModel);
 
         return binding.getRoot();
@@ -48,10 +48,5 @@ public class LoginFragment extends Fragment implements LoginViewAccess {
     @Override
     public @NonNull String getLoginErrorMessage() {
         return "Login has to be a valid email address";
-    }
-
-    @Override
-    public @NonNull String getPasswordErrorMessage() {
-        return "Password has to contain at least 6 characters";
     }
 }

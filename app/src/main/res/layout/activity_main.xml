@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
 
@@ -9,54 +10,44 @@
             type="com.rstit.base.ui.main.MainViewModel"/>
     </data>
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="match_parent">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:visibleIf="@{!model.mIsFormVisible}">
 
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
+            <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:orientation="vertical">
+                android:layout_marginBottom="@dimen/padding_large"
+                android:onClick="@{() -> model.openLogin()}"
+                android:text="Login"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/padding_large"
-                    android:onClick="@{() -> model.openLogin()}"
-                    android:text="Login"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:onClick="@{() -> model.openRegister()}"
+                android:text="Register"/>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/padding_large"
-                    android:onClick="@{() -> model.openRegister()}"
-                    android:text="Register"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/padding_large"
+                android:onClick="@{() -> model.openForgot()}"
+                android:text="Forgot password"/>
+        </LinearLayout>
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/padding_large"
-                    android:onClick="@{() -> model.openForgot()}"
-                    android:text="Forgot password"/>
-            </LinearLayout>
-
-            <FrameLayout
-                android:id="@+id/flContainer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-
-        </FrameLayout>
-    </LinearLayout>
+        <FrameLayout
+            android:id="@+id/flContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:visibleIf="@{model.mIsFormVisible}"/>
+    </FrameLayout>
 </layout>

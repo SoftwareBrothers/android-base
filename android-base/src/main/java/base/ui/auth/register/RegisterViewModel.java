@@ -135,7 +135,7 @@ public class RegisterViewModel extends BaseViewModel {
         return valid;
     }
 
-    protected boolean isInputDataValid() {
+    public boolean isInputDataValid() {
         return isLoginValid() && isFirstNameValid() && isLastNameValid() && isPasswordValid() &&
                 isConfirmPasswordValid();
     }
