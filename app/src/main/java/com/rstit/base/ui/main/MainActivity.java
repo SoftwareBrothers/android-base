@@ -10,10 +10,10 @@ import android.support.v7.app.AppCompatActivity;
 import com.rstit.base.R;
 import com.rstit.base.SampleApplication;
 import com.rstit.base.databinding.ActivityMainBinding;
-import com.rstit.di.main.MainModule;
 import com.rstit.base.ui.ForgotPasswordFragment;
 import com.rstit.base.ui.LoginFragment;
 import com.rstit.base.ui.RegisterFragment;
+import com.rstit.di.main.MainModule;
 
 import javax.inject.Inject;
 
@@ -33,7 +33,30 @@ public class MainActivity extends AppCompatActivity implements MainViewAccess {
             mForgotPasswordFragment = new ForgotPasswordFragment();
             mLoginFragment = new LoginFragment();
             mRegisterFragment = new RegisterFragment();
+        } else {
+            findFragments();
         }
+    }
+
+    private void findFragments() {
+        Fragment forgotPasswordFragment = findFragmentByTag(mForgotPasswordFragment.getClass().getName());
+        mForgotPasswordFragment = forgotPasswordFragment != null ?
+                (ForgotPasswordFragment) forgotPasswordFragment :
+                new ForgotPasswordFragment();
+
+        Fragment loginFragment = findFragmentByTag(mLoginFragment.getClass().getName());
+        mLoginFragment = loginFragment != null ?
+                (LoginFragment) loginFragment :
+                new LoginFragment();
+
+        Fragment registerFragment = findFragmentByTag(mRegisterFragment.getClass().getName());
+        mRegisterFragment = registerFragment != null ?
+                (RegisterFragment) registerFragment :
+                new RegisterFragment();
+    }
+
+    private @Nullable Fragment findFragmentByTag(@NonNull String tag) {
+        return getSupportFragmentManager().findFragmentByTag(checkNotNull(tag));
     }
 
     @Override
@@ -70,7 +93,7 @@ public class MainActivity extends AppCompatActivity implements MainViewAccess {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .replace(R.id.flContainer, fragment)
+                .replace(R.id.flContainer, fragment, fragment.getClass().getName())
                 .commit();
     }
 
