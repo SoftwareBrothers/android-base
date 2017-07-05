@@ -1,3 +1,23 @@
 <resources>
-    <string name="app_name">BaseProject</string>
+    <string name="app_name">Sample Project</string>
+
+    <string name="main_login">Login</string>
+    <string name="main_register">Register</string>
+    <string name="main_forgot_password">Forgot password</string>
+
+    <string name="button_login">Login</string>
+    <string name="button_register">Register</string>
+    <string name="button_forgot_password">Reset password</string>
+
+    <string name="hint_login">Login</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_first_name">First name</string>
+    <string name="hint_last_name">Last name</string>
+    <string name="hint_confirm_password">Confirm password</string>
+
+    <string name="error_login">Login has to be a valid email address</string>
+    <string name="error_password">Password has to contain at least 6 characters</string>
+    <string name="error_first_name">First name cannot be empty</string>
+    <string name="error_last_name">Last name cannot be empty</string>
+    <string name="error_confirm_password">Passwords have to be the same</string>
 </resources>
