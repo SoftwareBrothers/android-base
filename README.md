@@ -4,6 +4,8 @@ The project contains the most used modules in Android applications developed by 
 
 Getting started
 ----------
+We are using the most common libraries and approaches available in the Android community like [DataBinding](https://developer.android.com/topic/libraries/data-binding/index.html) or [Dagger 2](https://google.github.io/dagger/).
+Applications are written based on MVVM architecture - you can read more about this pattern [here](https://msdn.microsoft.com/en-us/library/hh848246.aspx)
 
 Examples
 --------
