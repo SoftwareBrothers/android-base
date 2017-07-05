@@ -1,5 +1,7 @@
-![rstit](http://rst-it.com/assets/logo-5148e54c49c211b40d170a5450634799.png)
 # Android Base
+
+[![RST](http://rst-it.com/files/rstwithpassion.png)](http://rst-it.com) [![RST](http://rst-it.com/files/howwedoapps.png)](http://howwedoapps.com)
+
 The project contains the most used modules in Android applications developed by RST Software House.
 
 Getting started
