@@ -39,24 +39,19 @@ public class MainActivity extends AppCompatActivity implements MainViewAccess {
     }
 
     private void findFragments() {
-        Fragment forgotPasswordFragment = findFragmentByTag(mForgotPasswordFragment.getClass().getName());
-        mForgotPasswordFragment = forgotPasswordFragment != null ?
-                (ForgotPasswordFragment) forgotPasswordFragment :
-                new ForgotPasswordFragment();
+        ForgotPasswordFragment forgotPasswordFragment = findFragmentByTag(ForgotPasswordFragment.class);
+        mForgotPasswordFragment = forgotPasswordFragment != null ? forgotPasswordFragment : new ForgotPasswordFragment();
 
-        Fragment loginFragment = findFragmentByTag(mLoginFragment.getClass().getName());
-        mLoginFragment = loginFragment != null ?
-                (LoginFragment) loginFragment :
-                new LoginFragment();
+        LoginFragment loginFragment = findFragmentByTag(LoginFragment.class);
+        mLoginFragment = loginFragment != null ? loginFragment : new LoginFragment();
 
-        Fragment registerFragment = findFragmentByTag(mRegisterFragment.getClass().getName());
-        mRegisterFragment = registerFragment != null ?
-                (RegisterFragment) registerFragment :
-                new RegisterFragment();
+        RegisterFragment registerFragment = findFragmentByTag(RegisterFragment.class);
+        mRegisterFragment = registerFragment != null ? registerFragment : new RegisterFragment();
     }
 
-    private @Nullable Fragment findFragmentByTag(@NonNull String tag) {
-        return getSupportFragmentManager().findFragmentByTag(checkNotNull(tag));
+    @SuppressWarnings("unchecked")
+    private @Nullable <T extends Fragment> T findFragmentByTag(@NonNull Class<T> cls) {
+        return (T) getSupportFragmentManager().findFragmentByTag(cls.getName());
     }
 
     @Override
